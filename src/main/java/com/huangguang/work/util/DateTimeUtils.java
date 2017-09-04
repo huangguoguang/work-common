@@ -1,4 +1,4 @@
-package com.huangguang.util;
+package com.huangguang.work.util;
 
 import java.text.DateFormat;
 import java.text.ParseException;
