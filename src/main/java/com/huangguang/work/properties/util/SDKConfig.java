@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Properties;
 
 import org.apache.commons.lang3.StringUtils;
@@ -44,7 +45,7 @@ public class SDKConfig {
 				try {
 					in = new FileInputStream(file);
 					properties = new Properties();
-					properties.load(in);
+					properties.load(new InputStreamReader(in, "UTF-8"));
 					loadProperties(properties);
 				} catch (FileNotFoundException e) {
 					LogUtil.writeErrorLog(e.getMessage(), e);
